@@ -126,6 +126,15 @@ namespace soilSensor {
 namespace tempSensor {
 
     /**
+     * Reads temperature in Celsius from an external DS18B20 sensor connected to Pin P0
+     */
+    //% block="read temperature (°C) on P0"
+    //% weight=90
+    export function readTemperatureP0(): number {
+        return dstemp.celsius(DigitalPin.P0);
+    }
+
+    /**
      * Reads temperature in Celsius from an external sensor on a chosen pin
      */
     //% block="read temperature (°C) on pin %pin"
